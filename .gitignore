@@ -1,0 +1,6 @@
+xcuserdata/
+Pods/
+.DS_Store
+Weather.app.dSYM.zip
+Weather.ipa
+Weather.xcodeproj/xcuserdata/

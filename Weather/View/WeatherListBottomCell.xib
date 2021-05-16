@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listBottomCell" id="KGk-i7-Jjw" customClass="WeatherListBottomCell" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iz-7W-WGA" userLabel="Weather Link Button">
+                        <rect key="frame" x="145" y="8" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="do1-xl-hcI"/>
+                            <constraint firstAttribute="width" constant="30" id="iQd-he-GRZ"/>
+                        </constraints>
+                        <connections>
+                            <action selector="weatherLinkButtonTouch" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JvC-Zg-vA9"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e2-1K-a7z" userLabel="Weather Search Button">
+                        <rect key="frame" x="284" y="11" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="mfI-wV-Rlc"/>
+                            <constraint firstAttribute="width" constant="24" id="nRr-Fe-I0N"/>
+                        </constraints>
+                        <state key="normal" image="magnifyingglass" catalog="system"/>
+                        <connections>
+                            <action selector="searchButtonTouch" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ASm-ae-8XW"/>
+                        </connections>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="T1h-2t-5j8">
+                        <rect key="frame" x="12" y="6" width="65" height="34"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbW-9D-JB0" userLabel="Celsius Button">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                <connections>
+                                    <action selector="celsiusButtonTouch" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Sr8-cN-QaR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3M-e9-hkb" userLabel="Slash Label">
+                                <rect key="frame" x="30" y="0.0" width="5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMR-tZ-q77" userLabel="Fahrenheit Button">
+                                <rect key="frame" x="35" y="0.0" width="30" height="34"/>
+                                <connections>
+                                    <action selector="fahrenheitButtonTouch" destination="KGk-i7-Jjw" eventType="touchUpInside" id="abA-ZI-rrg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9e2-1K-a7z" secondAttribute="trailing" constant="12" id="13l-xW-hON"/>
+                    <constraint firstItem="9e2-1K-a7z" firstAttribute="centerY" secondItem="9iz-7W-WGA" secondAttribute="centerY" id="3Hi-SN-YS9"/>
+                    <constraint firstItem="T1h-2t-5j8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="AUk-oV-x5x"/>
+                    <constraint firstAttribute="bottom" secondItem="9iz-7W-WGA" secondAttribute="bottom" constant="8" id="CKq-S0-nwG"/>
+                    <constraint firstItem="9iz-7W-WGA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Wo5-5t-m1K"/>
+                    <constraint firstItem="9iz-7W-WGA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="b77-Zl-Zxm"/>
+                    <constraint firstItem="9iz-7W-WGA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T1h-2t-5j8" secondAttribute="trailing" constant="8" id="eUW-wf-vzb"/>
+                    <constraint firstItem="T1h-2t-5j8" firstAttribute="centerY" secondItem="9iz-7W-WGA" secondAttribute="centerY" id="mPY-uV-Per"/>
+                    <constraint firstItem="9e2-1K-a7z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9iz-7W-WGA" secondAttribute="trailing" constant="8" id="pFg-yu-Hyj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="celsiusButton" destination="sbW-9D-JB0" id="9eq-mQ-BSL"/>
+                <outlet property="fahrenheitButton" destination="GMR-tZ-q77" id="9lD-pU-IEe"/>
+                <outlet property="searchButton" destination="9e2-1K-a7z" id="tMu-gH-xQi"/>
+                <outlet property="slashLabel" destination="w3M-e9-hkb" id="CuY-9b-duh"/>
+                <outlet property="weatherLinkButton" destination="9iz-7W-WGA" id="poc-Sz-ngf"/>
+            </connections>
+            <point key="canvasLocation" x="89.855072463768124" y="63.616071428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>
